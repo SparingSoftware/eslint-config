@@ -1,0 +1,1 @@
+# @sparing-software/eslint-config
