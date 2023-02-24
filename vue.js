@@ -1,3 +1,5 @@
+const defaultConfig = require('./index');
+
 /** @type {import("eslint").Linter.Config}  */
 const vue = {
   extends: [
@@ -10,6 +12,7 @@ const vue = {
     ecmaVersion: 'latest',
   },
   rules: {
+    ...defaultConfig.rules,
     'import/order': [
       'warn',
       {
@@ -40,6 +43,7 @@ const vue = {
         order: ['template', 'script', 'style'],
       },
     ],
+    'vue/define-props-declaration': 'warn',
   },
 };
 
