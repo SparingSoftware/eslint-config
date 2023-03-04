@@ -1,0 +1,31 @@
+{
+  "name": "@sparing-software/eslint-config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SparingSoftware/eslint-config.git"
+  },
+  "author": "Sparing Software",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SparingSoftware/eslint-config/issues"
+  },
+  "homepage": "https://github.com/SparingSoftware/eslint-config#readme",
+  "devDependencies": {
+    "@types/eslint": "^8.4.10",
+    "@vue/eslint-config-typescript": "^11.0.0",
+    "eslint": "^8.17.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-babel-module": "^5.3.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "eslint-plugin-vue": "^9.3.0",
+    "prettier": "^2.6.2"
+  },
+  "resolutions": {
+    "@react-native-community/eslint-config/eslint-plugin-flowtype": "^8.0.0"
+  }
+}
