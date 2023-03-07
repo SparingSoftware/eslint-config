@@ -13,6 +13,11 @@
     "url": "https://github.com/SparingSoftware/eslint-config/issues"
   },
   "homepage": "https://github.com/SparingSoftware/eslint-config#readme",
+  "files": [
+    "index.js",
+    "react-native.js",
+    "vue.js"
+  ],
   "devDependencies": {
     "@types/eslint": "^8.4.10",
     "@vue/eslint-config-typescript": "^11.0.0",
