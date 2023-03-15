@@ -2,7 +2,7 @@
 
 `.eslintrc`
 
-Typescript
+## Typescript
 
 ```json
 {
@@ -10,7 +10,7 @@ Typescript
 }
 ```
 
-Vue 3
+## Vue 3
 
 ```json
 {
@@ -18,7 +18,7 @@ Vue 3
 }
 ```
 
-React Native
+## React Native
 
 ```json
 {
