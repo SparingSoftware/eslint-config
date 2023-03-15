@@ -4,39 +4,47 @@ const reactNative = {
   plugins: ['import'],
   settings: {
     'import/resolver': {
-      'babel-module': {},
-    },
+      'babel-module': {}
+    }
   },
   rules: {
     'no-shadow': 'off',
     'import/order': [
       'warn',
       {
-        groups: ['builtin', 'external', 'internal', ['parent', 'sibling', 'index']],
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          ['parent', 'sibling', 'index']
+        ],
         alphabetize: {
-          order: 'asc',
+          order: 'asc'
         },
         pathGroups: [
           {
             pattern: '@/styles/**',
             group: 'internal',
-            position: 'after',
+            position: 'after'
           },
           {
             pattern: '@/**',
             group: 'internal',
-            position: 'before',
-          },
+            position: 'before'
+          }
         ],
-        'newlines-between': 'always',
-      },
+        'newlines-between': 'always'
+      }
     ],
     '@typescript-eslint/no-var-requires': 'off',
     'react/react-in-jsx-scope': 'off',
-    'react/jsx-curly-brace-presence': ['warn', { props: 'never', children: 'ignore' }],
+    'react/jsx-curly-brace-presence': [
+      'warn',
+      { props: 'never', children: 'ignore' }
+    ],
     'react/jsx-boolean-value': ['warn', 'never'],
-    'react/jsx-no-leaked-render': 'error',
-  },
-};
+    'react/jsx-no-leaked-render': 'error'
+  }
+}
 
-module.exports = reactNative;
+module.exports = reactNative

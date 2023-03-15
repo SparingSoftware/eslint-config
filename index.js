@@ -7,16 +7,17 @@ const defaultConfig = {
       'warn',
       {
         selector: 'TSEnumDeclaration',
-        message: 'Prefer using union types instead of enums',
+        message: 'Prefer using union types instead of enums'
       },
       {
         selector: 'TSInterfaceDeclaration',
-        message: 'Prefer using types instead of interfaces',
+        message: 'Prefer using types instead of interfaces'
       },
       {
         selector: 'TSPropertySignature TSUndefinedKeyword',
-        message: 'Prefer declaring property type with optional ? operator instead of undefined',
-      },
+        message:
+          'Prefer declaring property type with optional ? operator instead of undefined'
+      }
     ],
     'arrow-body-style': ['warn', 'as-needed'],
     curly: ['warn', 'multi', 'consistent'],
@@ -31,19 +32,24 @@ const defaultConfig = {
     'import/order': [
       'warn',
       {
-        groups: ['builtin', 'external', 'internal', ['parent', 'sibling', 'index']],
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          ['parent', 'sibling', 'index']
+        ],
         alphabetize: {
-          order: 'asc',
+          order: 'asc'
         },
         pathGroups: [
           {
             pattern: '@/**',
             group: 'internal',
-            position: 'before',
-          },
+            position: 'before'
+          }
         ],
-        'newlines-between': 'always',
-      },
+        'newlines-between': 'always'
+      }
     ],
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
@@ -54,8 +60,14 @@ const defaultConfig = {
     '@typescript-eslint/no-explicit-any': 'warn',
     '@typescript-eslint/array-type': 'warn',
     '@typescript-eslint/method-signature-style': 'warn',
-    '@typescript-eslint/consistent-type-assertions': ['warn', { assertionStyle: 'as', objectLiteralTypeAssertions: 'allow-as-parameter' }],
-  },
-};
+    '@typescript-eslint/consistent-type-assertions': [
+      'warn',
+      {
+        assertionStyle: 'as',
+        objectLiteralTypeAssertions: 'allow-as-parameter'
+      }
+    ]
+  }
+}
 
-module.exports = defaultConfig;
+module.exports = defaultConfig

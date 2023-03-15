@@ -1,4 +1,4 @@
-const defaultConfig = require('./index');
+const defaultConfig = require('./index')
 
 /** @type {import("eslint").Linter.Config}  */
 const vue = {
@@ -6,22 +6,27 @@ const vue = {
     'plugin:vue/vue3-recommended',
     'eslint:recommended',
     '@sparing-software/eslint-config',
-    '@vue/eslint-config-typescript/recommended',
+    '@vue/eslint-config-typescript/recommended'
   ],
   parserOptions: {
-    ecmaVersion: 'latest',
+    ecmaVersion: 'latest'
   },
   rules: {
     ...defaultConfig.rules,
     'import/order': [
       'warn',
       {
-        groups: ['builtin', 'external', 'internal', ['parent', 'sibling', 'index']],
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          ['parent', 'sibling', 'index']
+        ],
         alphabetize: {
-          order: 'asc',
+          order: 'asc'
         },
-        'newlines-between': 'always',
-      },
+        'newlines-between': 'always'
+      }
     ],
     '@typescript-eslint/ban-ts-comment': 'off',
     'vue/no-v-html': 'off',
@@ -31,20 +36,20 @@ const vue = {
         html: {
           void: 'always', // prettier
           normal: 'always',
-          component: 'always',
-        },
-      },
+          component: 'always'
+        }
+      }
     ],
     'vue/component-name-in-template-casing': ['error', 'PascalCase'],
     'vue/prefer-true-attribute-shorthand': ['warn', 'always'],
     'vue/component-tags-order': [
       'warn',
       {
-        order: ['template', 'script', 'style'],
-      },
+        order: ['template', 'script', 'style']
+      }
     ],
-    'vue/define-props-declaration': 'warn',
-  },
-};
+    'vue/define-props-declaration': 'warn'
+  }
+}
 
-module.exports = vue;
+module.exports = vue
