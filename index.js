@@ -1,7 +1,7 @@
 /** @type {import("eslint").Linter.Config}  */
 const defaultConfig = {
   extends: ['plugin:@typescript-eslint/recommended', 'prettier'],
-  plugins: ['import'],
+  plugins: ['import', 'unicorn'],
   rules: {
     'no-restricted-syntax': [
       'warn',
