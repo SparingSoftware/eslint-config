@@ -20,7 +20,6 @@ const defaultConfig = {
       }
     ],
     'arrow-body-style': ['warn', 'as-needed'],
-    curly: ['warn', 'multi', 'consistent'],
     'spaced-comment': ['warn', 'always'],
     'no-empty': 'warn',
     'prefer-destructuring': ['warn', { object: false, array: true }],
