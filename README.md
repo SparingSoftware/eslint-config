@@ -18,6 +18,14 @@
 }
 ```
 
+## Nuxt 3
+
+```json
+{
+  "extends": ["@sparing-software/eslint-config/nuxt"]
+}
+```
+
 ## React Native
 
 ```json

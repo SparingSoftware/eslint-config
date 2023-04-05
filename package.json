@@ -19,9 +19,11 @@
   "files": [
     "index.js",
     "react-native.js",
-    "vue.js"
+    "vue.js",
+    "nuxt.js"
   ],
   "dependencies": {
+    "@nuxt/eslint-config": "^0.1.1",
     "@types/eslint": "^8.4.10",
     "@vue/eslint-config-typescript": "^11.0.0",
     "eslint": "^8.17.0",
