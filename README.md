@@ -26,6 +26,14 @@
 }
 ```
 
+## Next
+
+```json
+{
+  "extends": ["@sparing-software/eslint-config/next"]
+}
+```
+
 ## React Native
 
 ```json

@@ -20,8 +20,12 @@
     "index.js",
     "react-native.js",
     "vue.js",
-    "nuxt.js"
+    "nuxt.js",
+    "next.js"
   ],
+  "peerDependencies": {
+    "next": "*"
+  },
   "dependencies": {
     "@nuxt/eslint-config": "^0.1.1",
     "@types/eslint": "^8.4.10",
