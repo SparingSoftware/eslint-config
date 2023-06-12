@@ -1,8 +1,9 @@
 # @sparing-software/eslint-config
 
+## Configurations
 `.eslintrc`
 
-## Typescript
+### Typescript
 
 ```json
 {
@@ -10,7 +11,7 @@
 }
 ```
 
-## Vue 3
+### Vue 3
 
 ```json
 {
@@ -18,7 +19,7 @@
 }
 ```
 
-## Nuxt 3
+### Nuxt 3
 
 ```json
 {
@@ -26,7 +27,7 @@
 }
 ```
 
-## Next
+### Next
 
 ```json
 {
@@ -34,7 +35,7 @@
 }
 ```
 
-## React Native
+### React Native
 
 ```json
 {
@@ -42,6 +43,6 @@
 }
 ```
 
-## Versioning
+## Releasing and versioning
 
-Use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) to automatically bump major, minor and patch versions. All other commits are treated as patch changes. If you don't need automatic version bump add [skip ci] at the end of the commit message.
+Use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) to automatically bump major, minor and patch versions. Read more about semantic releasing in this [docs](https://semantic-release.gitbook.io/semantic-release/recipes/release-workflow).
