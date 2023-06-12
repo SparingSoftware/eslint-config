@@ -6,10 +6,6 @@ const defaultConfig = {
     'no-restricted-syntax': [
       'warn',
       {
-        selector: 'TSEnumDeclaration',
-        message: 'Prefer using union types instead of enums'
-      },
-      {
         selector: 'TSInterfaceDeclaration',
         message: 'Prefer using types instead of interfaces'
       }
