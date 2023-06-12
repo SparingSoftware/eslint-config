@@ -12,11 +12,6 @@ const defaultConfig = {
       {
         selector: 'TSInterfaceDeclaration',
         message: 'Prefer using types instead of interfaces'
-      },
-      {
-        selector: 'TSPropertySignature TSUndefinedKeyword',
-        message:
-          'Prefer declaring property type with optional ? operator instead of undefined'
       }
     ],
     'arrow-body-style': ['warn', 'as-needed'],
