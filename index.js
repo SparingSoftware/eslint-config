@@ -22,6 +22,7 @@ const defaultConfig = {
     'arrow-body-style': ['warn', 'as-needed'],
     'spaced-comment': ['warn', 'always'],
     'no-empty': 'warn',
+    'no-duplicate-imports': 'warn',
     'prefer-destructuring': ['warn', { object: false, array: true }],
     'max-params': ['warn', { max: 2 }],
     'no-multiple-empty-lines': ['error', { max: 2 }],
