@@ -6,17 +6,8 @@ const defaultConfig = {
     'no-restricted-syntax': [
       'warn',
       {
-        selector: 'TSEnumDeclaration',
-        message: 'Prefer using union types instead of enums'
-      },
-      {
         selector: 'TSInterfaceDeclaration',
         message: 'Prefer using types instead of interfaces'
-      },
-      {
-        selector: 'TSPropertySignature TSUndefinedKeyword',
-        message:
-          'Prefer declaring property type with optional ? operator instead of undefined'
       }
     ],
     'arrow-body-style': ['warn', 'as-needed'],
