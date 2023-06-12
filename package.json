@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/SparingSoftware/eslint-config.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "Sparing Software",
   "license": "ISC",
   "bugs": {
@@ -43,10 +46,12 @@
     "@react-native-community/eslint-config/eslint-plugin-flowtype": "^8.0.0"
   },
   "devDependencies": {
+    "@semantic-release/git": "^10.0.1",
     "@sparing-software/prettier-config": "^1.0.0",
     "husky": "^8.0.0",
     "is-ci": "^3.0.1",
     "lint-staged": "^13.2.0",
-    "prettier": "^2.8.4"
+    "prettier": "^2.8.4",
+    "semantic-release": "^21.0.5"
   }
 }
