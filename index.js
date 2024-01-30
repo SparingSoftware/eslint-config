@@ -15,7 +15,6 @@ const defaultConfig = {
     'no-empty': 'warn',
     'no-duplicate-imports': 'warn',
     'prefer-destructuring': ['warn', { object: false, array: true }],
-    'max-params': ['warn', { max: 2 }],
     'no-multiple-empty-lines': ['error', { max: 2 }],
     'object-shorthand': ['warn', 'always'],
     'unicorn/prefer-ternary': 'warn',
