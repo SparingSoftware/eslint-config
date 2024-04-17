@@ -1,6 +1,6 @@
 /** @type {import("eslint").Linter.Config}  */
 const reactNative = {
-  extends: ['@react-native-community', '@sparing-software/eslint-config'],
+  extends: ['@react-native', '@sparing-software/eslint-config'],
   plugins: ['import'],
   settings: {
     'import/resolver': {
