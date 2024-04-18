@@ -44,9 +44,6 @@
     "eslint-plugin-unicorn": "^52.0.0",
     "eslint-plugin-vue": "^9.25.0"
   },
-  "resolutions": {
-    "@react-native-community/eslint-config/eslint-plugin-flowtype": "^8.0.0"
-  },
   "devDependencies": {
     "@commitlint/cli": "^19.2.2",
     "@semantic-release/git": "^10.0.1",
