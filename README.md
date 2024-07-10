@@ -1,6 +1,7 @@
 # @sparing-software/eslint-config
 
 ## Configurations
+
 `.eslintrc`
 
 ### Typescript
@@ -24,6 +25,14 @@
 ```json
 {
   "extends": ["@sparing-software/eslint-config/nuxt"]
+}
+```
+
+### React
+
+```json
+{
+  "extends": ["@sparing-software/eslint-config/react"]
 }
 ```
 
