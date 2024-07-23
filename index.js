@@ -5,6 +5,7 @@ const defaultConfig = {
     'plugin:@typescript-eslint/recommended',
     'prettier'
   ],
+  ignorePatterns: ['dist', '*.cjs'],
   plugins: ['import', 'unicorn'],
   rules: {
     'no-restricted-syntax': [
