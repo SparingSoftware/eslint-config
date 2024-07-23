@@ -14,5 +14,8 @@ module.exports = {
       }
     }
   ],
-  env: { node: true }
+  env: { node: true },
+  globals: {
+    gtag: true
+  }
 }
