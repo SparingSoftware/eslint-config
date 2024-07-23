@@ -1,5 +1,3 @@
-const defaultConfig = require('./index')
-
 /** @type {import("eslint").Linter.Config}  */
 const vue = {
   extends: [
@@ -14,11 +12,10 @@ const vue = {
   */
   parser: 'vue-eslint-parser',
   parserOptions: {
-    ...defaultConfig.parserOptions,
-    ecmaVersion: 'latest'
+    parser: '@typescript-eslint/parser',
+    project: true
   },
   rules: {
-    ...defaultConfig.rules,
     'import/order': [
       'warn',
       {
