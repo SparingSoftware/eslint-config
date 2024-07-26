@@ -48,7 +48,8 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-unicorn": "^52.0.0",
-    "eslint-plugin-vue": "^9.25.0"
+    "eslint-plugin-vue": "^9.25.0",
+    "eslint-plugin-vuejs-accessibility": "^2.4.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.2.2",

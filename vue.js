@@ -2,13 +2,15 @@
 const vue = {
   extends: [
     'plugin:vue/vue3-recommended',
+    'plugin:vuejs-accessibility/recommended',
     '@sparing-software/eslint-config',
     '@vue/eslint-config-typescript/recommended'
   ],
-  /* 
+  plugins: ['vuejs-accessibility'],
+  /*
     This parser safe us from extra eslint problem after
     adding @typescript-eslint/prefer-nullish-coalescing flag into index.js
-    https://stackoverflow.com/a/66598327 
+    https://stackoverflow.com/a/66598327
   */
   parser: 'vue-eslint-parser',
   parserOptions: {
@@ -51,7 +53,13 @@ const vue = {
         order: ['template', 'script', 'style']
       }
     ],
-    'vue/define-props-declaration': 'warn'
+    'vue/define-props-declaration': 'warn',
+    'vuejs-accessibility/anchor-has-content': [
+      'error',
+      {
+        components: ['RouterLink']
+      }
+    ]
   }
 }
 
