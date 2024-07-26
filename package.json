@@ -29,10 +29,10 @@
     "astro.js"
   ],
   "peerDependencies": {
-    "eslint": ">= 8",
-    "next": "*"
+    "eslint": ">= 8"
   },
   "dependencies": {
+    "@next/eslint-plugin-next": "^14.2.5",
     "@nuxt/eslint-config": "^0.3.7",
     "@react-native/eslint-config": "^0.75.0-main",
     "@tanstack/eslint-plugin-query": "^5.20.1",
