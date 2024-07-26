@@ -4,8 +4,10 @@ const react = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:@tanstack/eslint-plugin-query/recommended',
+    'plugin:jsx-a11y/recommended',
     '@sparing-software/eslint-config'
   ],
+  plugins: ['jsx-a11y'],
   rules: {
     '@typescript-eslint/consistent-type-imports': 'error',
     'import/order': [
@@ -56,7 +58,32 @@ const react = {
       }
     ],
     'react/prop-types': [0],
-    'spaced-comment': [1, 'always', { markers: ['/'] }]
+    'spaced-comment': [1, 'always', { markers: ['/'] }],
+    'jsx-a11y/alt-text': [
+      'error',
+      {
+        img: ['Image']
+      }
+    ],
+    'jsx-a11y/img-redundant-alt': [
+      'error',
+      {
+        components: ['Image']
+      }
+    ],
+    'jsx-a11y/anchor-has-content': [
+      'error',
+      {
+        components: ['Link']
+      }
+    ],
+    'jsx-a11y/anchor-is-valid': [
+      'error',
+      {
+        components: ['Link'],
+        specialLink: ['to']
+      }
+    ]
   },
   settings: {
     react: {
