@@ -1,34 +1,12 @@
 /** @type {import("eslint").Linter.Config}  */
 const next = {
-  extends: ['next', 'next/core-web-vitals', '@sparing-software/eslint-config'],
+  extends: [
+    'next/core-web-vitals',
+    'plugin:jsx-a11y/recommended',
+    '@sparing-software/eslint-config'
+  ],
+  plugins: ['jsx-a11y'],
   rules: {
-    'import/order': [
-      'warn',
-      {
-        groups: [
-          'builtin',
-          'external',
-          'internal',
-          ['parent', 'sibling', 'index']
-        ],
-        alphabetize: {
-          order: 'asc'
-        },
-        pathGroups: [
-          {
-            pattern: '@/styles/**',
-            group: 'internal',
-            position: 'after'
-          },
-          {
-            pattern: '@/**',
-            group: 'internal',
-            position: 'before'
-          }
-        ],
-        'newlines-between': 'always'
-      }
-    ],
     'react/self-closing-comp': [
       'warn',
       {
@@ -42,7 +20,31 @@ const next = {
       { props: 'never', children: 'ignore' }
     ],
     'react/jsx-boolean-value': ['warn', 'never'],
-    'react/jsx-no-leaked-render': 'error'
+    'react/jsx-no-leaked-render': 'error',
+    'jsx-a11y/alt-text': [
+      'error',
+      {
+        img: ['Image']
+      }
+    ],
+    'jsx-a11y/img-redundant-alt': [
+      'error',
+      {
+        components: ['Image']
+      }
+    ],
+    'jsx-a11y/anchor-has-content': [
+      'error',
+      {
+        components: ['Link']
+      }
+    ],
+    'jsx-a11y/anchor-is-valid': [
+      'error',
+      {
+        components: ['Link']
+      }
+    ]
   }
 }
 
