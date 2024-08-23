@@ -47,7 +47,8 @@ const reactNative = {
       { props: 'never', children: 'ignore' }
     ],
     'react/jsx-boolean-value': ['warn', 'never'],
-    'react/jsx-no-leaked-render': 'error'
+    'react/jsx-no-leaked-render': 'error',
+    'react-native-a11y/has-accessibility-hint': 'off'
   }
 }
 
