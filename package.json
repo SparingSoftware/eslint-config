@@ -19,6 +19,9 @@
     "url": "https://github.com/SparingSoftware/eslint-config/issues"
   },
   "homepage": "https://github.com/SparingSoftware/eslint-config#readme",
+  "engines": {
+    "node": ">=18.18.0 || >=20.9.0 || >=21.0.0"
+  },
   "files": [
     "index.js",
     "react-native.js",
