@@ -32,7 +32,7 @@
     "astro.js"
   ],
   "peerDependencies": {
-    "eslint": ">= 8"
+    "eslint": ">= 9"
   },
   "dependencies": {
     "@next/eslint-plugin-next": "^14.2.15",
