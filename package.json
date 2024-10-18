@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prepare": "is-ci || husky install"
+    "prepare": "is-ci || husky install",
+    "pack-windows": "npm pack && powershell -Command \"Clear-Host; $tgzFile = Get-ChildItem -Filter *.tgz | Select-Object -First 1; Write-Host \\\"$(Get-Location)\\$($tgzFile.Name)\\\"\"",
+    "pack-macos": "npm pack && clear && echo \"$(pwd)/$(ls -d *.tgz | head -n 1)\""
   },
   "repository": {
     "type": "git",
