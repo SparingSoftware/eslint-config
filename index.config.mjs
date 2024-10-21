@@ -122,20 +122,34 @@ export default [
       'unicorn/require-array-join-separator': 'warn'
     }
   },
+  // Overrides
   {
+    // Vue and Astro config have their own parserOptions implementation so we don't attach them here.
     files: ['**/*.ts', '**/*.tsx'],
 
     languageOptions: {
       ecmaVersion: 5,
       sourceType: 'script',
-
+      /*
+        Rule @typescript-eslint/prefer-nullish-coalescing - require parserOptions reason:
+        Error while loading rule '@typescript-eslint/prefer-nullish-coalescing':
+        You have used a rule which requires parserServices to be generated. 
+        You must therefore provide a value for the "parserOptions.project".
+      */
       parserOptions: {
         parser: '@typescript-eslint/parser',
         project: true
       }
     }
   },
+  // Overrides
   {
+    /* 
+        I try to fix rule: '@typescript-eslint/prefer-nullish-coalescing' for Astro but I can't find any solution.
+        The problem occurred when we created a new .astro file in which case eslint gave this error:
+        Parsing error: "parserOptions.programs" has been provided for @typescript-eslint/parser.
+        The file was not found in any of the provided program instance(s).
+      */
     files: ['**/*.ts', '**/*.tsx', '**/*.vue'],
 
     rules: {
