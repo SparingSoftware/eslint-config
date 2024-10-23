@@ -65,3 +65,25 @@ To test it, you have to build this package using `npm run pack-windows` or `npm 
 ## Releasing and versioning
 
 Use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) to automatically bump major, minor and patch versions. Read more about semantic releasing in this [docs](https://semantic-release.gitbook.io/semantic-release/recipes/release-workflow).
+
+## Migration guide:
+
+1. Create a file named `eslint.config.mjs` in the root of your project.
+2. Move `.eslintignore` to a eslint config like this:
+
+> Eslint ignore
+
+```
+dist
+.react-email
+*.html
+```
+
+> Eslint config
+
+```js
+export default [
+  {
+    ignores: ['.react-email/*', 'dist/*', '**/*.html']
+  }
+```
