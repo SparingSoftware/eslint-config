@@ -18,11 +18,8 @@ export default [
   {
     ignores: ['**/dist', '**/*.cjs']
   },
-  ...compat.extends(
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'prettier'
-  ),
+  js.configs.recommended,
+  ...compat.extends('plugin:@typescript-eslint/recommended', 'prettier'),
   {
     plugins: {
       import: fixupPluginRules(_import),
