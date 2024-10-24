@@ -1,5 +1,5 @@
 import eslintPluginImport from 'eslint-plugin-import'
-import js from '@eslint/js'
+import eslintJS from '@eslint/js'
 import tsEslint from 'typescript-eslint'
 import eslintConfigPrettier from 'eslint-config-prettier'
 import eslintPluginUnicorn from 'eslint-plugin-unicorn'
@@ -21,11 +21,11 @@ const importResolverFixConfig = {
 }
 
 /** @type {import("eslint").Linter.Config[]}  */
-export default [
+const mainConfig = [
   {
     ignores: ['**/dist', '**/*.cjs']
   },
-  js.configs.recommended,
+  eslintJS.configs.recommended,
   ...tsEslint.configs.recommended,
   eslintConfigPrettier,
   eslintPluginImport.flatConfigs.recommended,
@@ -165,3 +165,5 @@ export default [
   },
   importResolverFixConfig
 ]
+
+export default mainConfig
