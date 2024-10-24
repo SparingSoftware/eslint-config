@@ -1,9 +1,24 @@
-import _import from 'eslint-plugin-import'
-import unicorn from 'eslint-plugin-unicorn'
-import { fixupPluginRules } from '@eslint/compat'
+import eslintPluginImport from 'eslint-plugin-import'
 import js from '@eslint/js'
 import tsEslint from 'typescript-eslint'
 import eslintConfigPrettier from 'eslint-config-prettier'
+import eslintPluginUnicorn from 'eslint-plugin-unicorn'
+import globals from 'globals'
+
+/**
+ * It fixes the error: "Unable to resolve path to module '...' - import/no-unresolved"
+ * https://stackoverflow.com/questions/55198502/using-eslint-with-typescript-unable-to-resolve-path-to-module
+ */
+/** @type {import("eslint").Linter.Config}  */
+const importResolverFixConfig = {
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx']
+      }
+    }
+  }
+}
 
 /** @type {import("eslint").Linter.Config[]}  */
 export default [
@@ -13,12 +28,14 @@ export default [
   js.configs.recommended,
   ...tsEslint.configs.recommended,
   eslintConfigPrettier,
+  eslintPluginImport.flatConfigs.recommended,
   {
     plugins: {
-      import: fixupPluginRules(_import),
-      unicorn
+      unicorn: eslintPluginUnicorn
     },
-
+    languageOptions: {
+      globals: globals.builtin
+    },
     rules: {
       'no-restricted-syntax': [
         'warn',
@@ -145,5 +162,6 @@ export default [
     rules: {
       '@typescript-eslint/prefer-nullish-coalescing': 'warn'
     }
-  }
+  },
+  importResolverFixConfig
 ]
