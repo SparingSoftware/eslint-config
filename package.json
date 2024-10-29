@@ -24,8 +24,8 @@
     "node": ">=18.18.0 || >=20.9.0 || >=21.0.0"
   },
   "exports": {
-    ".": "./index.js",
-    "./react-new": "./react-new-cjs.js"
+    ".": "./main.mjs",
+    "./react": "./react.mjs"
   },
   "peerDependencies": {
     "eslint": ">= 9"

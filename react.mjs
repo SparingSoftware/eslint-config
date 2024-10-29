@@ -1,9 +1,9 @@
-const eslintPluginReact = require('eslint-plugin-react')
-const eslintPluginReactHooks = require('eslint-plugin-react-hooks')
-const eslintPluginQuery = require('@tanstack/eslint-plugin-query')
-const eslintPluginJsxA11y = require('eslint-plugin-jsx-a11y')
-const globals = require('globals')
-const mainConfig = require('./index')
+import eslintPluginReact from 'eslint-plugin-react'
+import eslintPluginReactHooks from 'eslint-plugin-react-hooks'
+import eslintPluginQuery from '@tanstack/eslint-plugin-query'
+import eslintPluginJsxA11y from 'eslint-plugin-jsx-a11y'
+import globals from 'globals'
+import mainConfig from './main.mjs'
 
 /** @type {import("eslint").Linter.Config} */
 const reactPluginConfig = {
@@ -137,8 +137,6 @@ const commonRules = {
 
     // Spacing and comments
     'spaced-comment': ['warn', 'always', { markers: ['/'] }]
-
-    // Accessibility rules
   }
 }
 
@@ -153,64 +151,6 @@ const reactConfig = [
   ...eslintPluginQuery.configs['flat/recommended'],
   a11yPluginConfig,
   commonRules
-  // {
-  //   plugins: {
-  //     jsxA11y: eslintPluginJsxA11y
-  //   },
-  //   languageOptions: {
-  //     globals: globals.browser
-  //   },
-  //   settings: {
-  //     react: {
-  //       version: 'detect'
-  //     }
-  //   },
-  //   rules: {
-  //     '@typescript-eslint/consistent-type-imports': 'error',
-
-  //     // Import order rules
-  //     'import/order': [
-  //       'warn',
-  //       {
-  //         groups: [
-  //           'builtin',
-  //           'external',
-  //           'internal',
-  //           ['parent', 'sibling', 'index']
-  //         ],
-  //         alphabetize: {
-  //           order: 'asc'
-  //         },
-  //         pathGroups: [
-  //           {
-  //             pattern: '@/styles/**',
-  //             group: 'internal',
-  //             position: 'after'
-  //           },
-  //           {
-  //             pattern: '@/**',
-  //             group: 'internal',
-  //             position: 'before'
-  //           }
-  //         ],
-  //         'newlines-between': 'always'
-  //       }
-  //     ],
-
-  //     // Restricted imports
-  //     'no-restricted-imports': [
-  //       'error',
-  //       {
-  //         patterns: ['@/modules/*/*']
-  //       }
-  //     ],
-
-  //     // Spacing and comments
-  //     'spaced-comment': ['warn', 'always', { markers: ['/'] }]
-
-  //     // Accessibility rules
-  //   }
-  // }
 ]
 
-module.exports = reactConfig
+export default reactConfig
