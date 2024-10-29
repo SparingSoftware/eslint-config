@@ -2,7 +2,6 @@
   "name": "@sparing-software/eslint-config",
   "version": "1.3.8",
   "description": "",
-  "main": "index.config.mjs",
   "scripts": {
     "prepare": "is-ci || husky install",
     "pack-windows": "npm pack && powershell -Command \"Clear-Host; $tgzFile = Get-ChildItem -Filter *.tgz | Select-Object -First 1; Write-Host \\\"$(Get-Location)\\$($tgzFile.Name)\\\"\"",
@@ -24,15 +23,10 @@
   "engines": {
     "node": ">=18.18.0 || >=20.9.0 || >=21.0.0"
   },
-  "files": [
-    "index.js",
-    "react-native.js",
-    "vue.js",
-    "nuxt.js",
-    "react.js",
-    "next.js",
-    "astro.js"
-  ],
+  "exports": {
+    ".": "./index.js",
+    "./react-new": "./react-new-cjs.js"
+  },
   "peerDependencies": {
     "eslint": ">= 9"
   },
