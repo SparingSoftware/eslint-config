@@ -87,3 +87,15 @@ export default [
     ignores: ['.react-email/*', 'dist/*', '**/*.html']
   }
 ```
+
+## Smart Checklist migration Todo List
+
+```
+- Update ESlint version to the latest (v9)
+- Update @sparing-software/eslint-config package to latest version
+- Create eslint.config.mj (Flat config)
+- Migrate .eslintignore to eslint.config.mjs (Flat config)
+- Migrate .eslintrc to eslint.config.mjs (Flat config)
+- Update npm run lint command to work with latest version of ESlint (or add if doesn't exist)
+- Fix any existing ESlint errors
+```
