@@ -1,15 +1,16 @@
 import globals from 'globals'
-import parser from 'astro-eslint-parser'
 import eslintPluginAstro from 'eslint-plugin-astro'
 
-import mainConfig from './main.mjs'
+import { mainConfigAstro } from './main.mjs'
 
 /** @type {import("eslint").Linter.Config[]} */
 export default [
+  ...mainConfigAstro,
   ...eslintPluginAstro.configs['flat/recommended'],
   ...eslintPluginAstro.configs['flat/jsx-a11y-recommended'],
-  ...mainConfig,
   {
+    // It fixes `process` is not defined issues
+    // https://stackoverflow.com/a/76081175
     languageOptions: {
       globals: {
         ...globals.node,
@@ -18,19 +19,6 @@ export default [
     }
   },
   {
-    files: ['**/*.astro'],
-
-    languageOptions: {
-      parser: parser,
-      ecmaVersion: 5,
-      sourceType: 'script',
-
-      parserOptions: {
-        parser: '@typescript-eslint/parser',
-        extraFileExtensions: ['.astro']
-      }
-    },
-
     rules: {
       'astro/jsx-a11y/alt-text': [
         'error',

@@ -21,14 +21,13 @@ const importResolverFixConfig = {
 }
 
 /** @type {import("eslint").Linter.Config[]}  */
-const mainConfig = [
+const baseConfig = [
   {
     ignores: ['**/dist', '**/*.cjs']
   },
   eslintJS.configs.recommended,
   ...tsEslint.configs.recommended,
   eslintConfigPrettier,
-  eslintPluginImport.flatConfigs.recommended,
   {
     plugins: {
       unicorn: eslintPluginUnicorn
@@ -66,39 +65,6 @@ const mainConfig = [
       ],
 
       'object-shorthand': ['warn', 'always'],
-
-      'import/newline-after-import': [
-        'warn',
-        {
-          count: 1
-        }
-      ],
-
-      'import/order': [
-        'warn',
-        {
-          groups: [
-            'builtin',
-            'external',
-            'internal',
-            ['parent', 'sibling', 'index']
-          ],
-
-          alphabetize: {
-            order: 'asc'
-          },
-
-          pathGroups: [
-            {
-              pattern: '@/**',
-              group: 'internal',
-              position: 'before'
-            }
-          ],
-
-          'newlines-between': 'always'
-        }
-      ],
 
       '@typescript-eslint/no-empty-function': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
@@ -144,20 +110,53 @@ const mainConfig = [
       }
     }
   },
-  // Overrides
-  {
-    /* 
-      I try to fix rule: '@typescript-eslint/prefer-nullish-coalescing' for Astro but I can't find any solution.
-      The problem occurred when we created a new .astro file in which case eslint gave this error:
-      Parsing error: "parserOptions.programs" has been provided for @typescript-eslint/parser.
-      The file was not found in any of the provided program instance(s).
-    */
-    files: ['**/*.ts', '**/*.tsx', '**/*.vue'],
-    rules: {
-      '@typescript-eslint/prefer-nullish-coalescing': 'warn'
-    }
-  },
   importResolverFixConfig
 ]
+
+/** @type {import("eslint").Linter.Config[]}  */
+export const mainConfig = [
+  ...baseConfig,
+  eslintPluginImport.flatConfigs.recommended,
+  {
+    rules: {
+      'import/newline-after-import': [
+        'warn',
+        {
+          count: 1
+        }
+      ],
+
+      'import/order': [
+        'warn',
+        {
+          groups: [
+            'builtin',
+            'external',
+            'internal',
+            ['parent', 'sibling', 'index']
+          ],
+
+          alphabetize: {
+            order: 'asc'
+          },
+
+          pathGroups: [
+            {
+              pattern: '@/**',
+              group: 'internal',
+              position: 'before'
+            }
+          ],
+
+          'newlines-between': 'always'
+        }
+      ]
+    }
+  }
+]
+
+// Astro main config doesn't include import plugin, as it breaks the "eslint-plugin-astro" package
+/** @type {import("eslint").Linter.Config[]}  */
+export const mainConfigAstro = [...baseConfig]
 
 export default mainConfig
