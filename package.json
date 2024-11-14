@@ -34,7 +34,8 @@
   "exports": {
     ".": "./configs/main.mjs",
     "./react": "./configs/react.mjs",
-    "./astro": "./configs/astro.mjs"
+    "./astro": "./configs/astro.mjs",
+    "./next": "./configs/next.mjs"
   },
   "peerDependencies": {
     "eslint": ">= 9"
