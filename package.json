@@ -36,7 +36,14 @@
     ".": "./configs/main.mjs",
     "./react": "./configs/react.mjs",
     "./astro": "./configs/astro.mjs",
-    "./next": "./configs/next.mjs"
+    "./next": "./configs/next.mjs",
+    "./legacy/main": "./legacy/main.js",
+    "./legacy/react": "./legacy/react.js",
+    "./legacy/next": "./legacy/next.js",
+    "./legacy/astro": "./legacy/astro.js",
+    "./legacy/vue": "./legacy/vue.js",
+    "./legacy/nuxt": "./legacy/nuxt.js",
+    "./legacy/react-native": "./legacy/react-native.js"
   },
   "peerDependencies": {
     "eslint": ">= 9"
