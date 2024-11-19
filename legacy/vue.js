@@ -3,7 +3,7 @@ const vue = {
   extends: [
     'plugin:vue/vue3-recommended',
     'plugin:vuejs-accessibility/recommended',
-    '@sparing-software/eslint-config',
+    '@sparing-software/eslint-config/legacy/main',
     '@vue/eslint-config-typescript/recommended'
   ],
   plugins: ['vuejs-accessibility'],

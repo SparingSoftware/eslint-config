@@ -3,7 +3,7 @@ module.exports = {
   extends: [
     'plugin:astro/recommended',
     'plugin:astro/jsx-a11y-recommended',
-    '@sparing-software/eslint-config'
+    '@sparing-software/eslint-config/legacy/main'
   ],
   overrides: [
     {
