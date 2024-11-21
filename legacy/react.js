@@ -5,7 +5,7 @@ const react = {
     'plugin:react-hooks/recommended',
     'plugin:@tanstack/eslint-plugin-query/recommended',
     'plugin:jsx-a11y/recommended',
-    '@sparing-software/eslint-config'
+    '@sparing-software/eslint-config/legacy/main'
   ],
   plugins: ['jsx-a11y'],
   rules: {

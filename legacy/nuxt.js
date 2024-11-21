@@ -2,7 +2,10 @@ const nuxtEslintConfig = require('@nuxt/eslint-config')
 
 /** @type {import("eslint").Linter.Config}  */
 const nuxt = {
-  extends: ['@nuxt/eslint-config', '@sparing-software/eslint-config/vue'],
+  extends: [
+    '@nuxt/eslint-config',
+    '@sparing-software/eslint-config/legacy/vue'
+  ],
   overrides: [...nuxtEslintConfig.overrides],
   rules: {
     'vuejs-accessibility/alt-text': [

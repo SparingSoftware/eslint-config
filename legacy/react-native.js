@@ -3,7 +3,7 @@ const reactNative = {
   extends: [
     '@react-native',
     'plugin:react-native-a11y/all',
-    '@sparing-software/eslint-config'
+    '@sparing-software/eslint-config/legacy/main'
   ],
   plugins: ['import'],
   settings: {

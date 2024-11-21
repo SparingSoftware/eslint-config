@@ -3,7 +3,7 @@ const next = {
   extends: [
     'next/core-web-vitals',
     'plugin:jsx-a11y/recommended',
-    '@sparing-software/eslint-config'
+    '@sparing-software/eslint-config/legacy/main'
   ],
   plugins: ['jsx-a11y'],
   rules: {
