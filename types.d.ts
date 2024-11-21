@@ -18,6 +18,10 @@ declare module '@sparing-software/eslint-config/next' {
   export default Config
 }
 
+declare module '@sparing-software/eslint-config/vue' {
+  export default Config
+}
+
 // Legacy configs
 
 declare module '@sparing-software/eslint-config/legacy/astro' {
